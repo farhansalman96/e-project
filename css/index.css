@@ -1,0 +1,120 @@
+
+   
+   /* -----------------aboutcss------------ */
+   a{
+    text-decoration: none;
+    color: #2e2e2e;
+   }
+   h5{
+    color: #2e2e2e;
+   }
+   .about-pic {
+        height: 70vh;
+
+    }
+
+    .about {
+        display: flex;
+        margin: 5%;
+    }
+
+    .about-para {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 20px;
+        text-align: justify;
+    }
+
+    @media(max-width: 950px) {
+        .about {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-pic {
+            display: flex;
+            justify-content: center;
+            margin-left: 12%;
+        }
+
+        .about-heading {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    /* -------------top card css---------------- */
+    .top-card-section {
+        /* white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden; */
+        margin-left: 2%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top-card {
+        display: inline-block;
+    }
+
+    .heading {
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        font-family: Courier;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+
+    /* ------------brands offering-------------- */
+    .logo {
+        height: 400px;
+        width: 400px;
+        background-size: cover;
+        border-radius: 15px;
+        margin: 20px;
+    }
+
+    .logo-button {
+        margin-left: 36%;
+        margin-top: 80%;
+        border: 1px solid #858484;
+        border-radius: 8px;
+        background-color: rgb(80, 80, 80);
+        color: #2e2e2e;
+        font-family: Verdana;
+    }
+
+    .brand-logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: center;
+    }
+
+   
+    /* ---------------contactus------------ */
+    .contact-us{
+        background-color: #858484;
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        list-style: none;
+    }
+    .contact-a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .contact-us-heading{
+        font-family:Georgia ;
+        color: #fff;
+        
+    }
+    a :hover {
+        color: #2e2e2e;
+
+    }
+    .support , .social-media{
+        margin-top: 10px;
+    }

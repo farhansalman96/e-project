@@ -1,0 +1,174 @@
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review-heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 45%;
+}
+
+.reviews {
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+a{
+text-decoration: none;
+color: rgb(192, 192, 192);
+}
+.review1 {
+width: 300px;
+border: 2px solid#706C61;
+border-radius: 10px;
+text-align: center;
+margin: 10px;
+}
+
+.review2 {
+    width: 300px;
+    border: 2px solid#706C61;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.review3 {
+    width: 300px;
+    border: 2px solid #706C61;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.costumer-name {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.para {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(228, 228, 228);
+    padding: 5px;
+}
+
+.cart {
+    display: flex;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.jsimgcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.jsimg {
+    width: 7.35vw;
+    border: 1px solid rgb(196, 196, 196);
+}
+
+#main-img {
+    width: 44vw;
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.shoesname {
+    font-family: sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.shoestype {
+    color:#706C61;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    margin: 5px;
+    margin-left: 0;
+}
+
+.best-seller-tag {
+    color: rgb(204, 26, 26);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.discount-tag {
+    color: dimgrey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.out-of-stock {
+    color: dimgray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.price {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-container {
+    margin: 20px;
+    margin-left: 10px;
+}
+
+.add-to-cart {
+    color: #fff;
+    background-color: black;
+    border: 1px rgb(94, 94, 94) solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.heading1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.para1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 75%;
+    font-weight: 500
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* width: 45%; */
+    font-weight: 500
+}
+
+.heading2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+.para2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* width: 45%; */
+    font-weight: 500
+}
+
+.description-container {
+    display: flex;
+    margin: 10px;
+}

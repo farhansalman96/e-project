@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e0e0e0;
+            color:  #272727;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color:#706C61;
+            text-shadow: 1px 1px 2px #666;
+        }
+        select {
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            border: 1px solid  #272727;;
+            transition: all 0.3s;
+        }
+        select:focus {
+            outline: none;
+            border-color:  #272727;;
+            box-shadow: 0 0 5px #706C61;
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .compare-table th, .compare-table td {
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            transition: background-color 0.3s;
+        }
+        .compare-table th {
+            background-color:  #272727;;
+            color: white;
+        }
+        .compare-table tr:hover td {
+            background-color: #f0f0f0;
+        }
+        .product-image {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <center>
+        <h1>Compare Products</h1>
+        <label for="product1">Select Product 1:</label>
+        <select id="product1">
+            <option value="">Select Product</option>
+            <option value="1">Nike Air jordan 4 RM</option>
+            <option value="2">Jordan Spizike Low</option>
+            <option value="3">Air Jordan 9 </option>
+            <option value="4">Nike Air Max Plus</option>
+            <option value="5">Nike Dunk Retro</option>
+            <option value="6">Nike Field General'</option>
+            <option value="7">Nike Motiva</option>
+            <option value="8">Nike Zoom Fly 6</option>
+            <option value="9">Puma Redon Move</option>
+            <option value="10">Puma Cell Thrill</option>
+            <option value="11">Puma Graviton </option>
+            <option value="12">PUMA INVERSE UNFILTERTED</option>
+            <option value="13">PUMA x LAMELO</option>
+            <option value="14">SPEEDCAT OG</option>
+            <option value="15">Deviate NITRO™ 3</option>
+            <option value="16">PUMA Ur Mostro</option>
+            <option value="17">Adizero Adios Pro 4</option>
+            <option value="18">Adizero EVO SL</option>
+            <option value="19">Galaxy OG </option>
+            <option value="20">Predator Elite</option>
+            <option value="21">Supernova Rise 2</option>
+            <option value="22">Terrex Skychaser</option>
+            <option value="23">Ultraboost 1.0</option>
+            <option value="24">VL Court Bold</option>
+
+        </select>
+
+        <label for="product2">Select Product 2:</label>
+        <select id="product2">
+            <option value="">Select Product</option>
+            <option value="1">Nike Air jordan 4 RM</option>
+            <option value="2">Jordan Spizike Low</option>
+            <option value="3">Air Jordan 9 </option>
+            <option value="4">Nike Air Max Plus</option>
+            <option value="5">Nike Dunk Retro</option>
+            <option value="6">Nike Field General'</option>
+            <option value="7">Nike Motiva</option>
+            <option value="8">Nike Zoom Fly 6</option>
+            <option value="9">Puma Redon Move</option>
+            <option value="10">Puma Cell Thrill</option>
+            <option value="11">Puma Graviton </option>
+            <option value="12">PUMA INVERSE UNFILTERTED</option>
+            <option value="13">PUMA x LAMELO</option>
+            <option value="14">SPEEDCAT OG</option>
+            <option value="15">Deviate NITRO™ 3</option>
+            <option value="16">PUMA Ur Mostro</option>
+            <option value="17">Adizero Adios Pro 4</option>
+            <option value="18">Adizero EVO SL</option>
+            <option value="19">Galaxy OG </option>
+            <option value="20">Predator Elite</option>
+            <option value="21">Supernova Rise 2</option>
+            <option value="22">Terrex Skychaser</option>
+            <option value="23">Ultraboost 1.0</option>
+            <option value="24">VL Court Bold</option>
+
+        </select>
+       </center>
+
+        <div id="comparisonResult"></div>
+    </div>
+
+    <script>
+        const products = {
+            "1": {
+                name: "Nike Air jordan 4 RM",
+                image: "../images/nike/air jordan 4/1.JPG",
+                price: "$230",
+                rating: "⭐⭐⭐⭐",
+                description: "Comfortable and Durable."
+            },
+            "2": {
+                name: "Jordan Spizike Low",
+                image: "../images/nike/jordan spizike/5.JPG",
+                price: "$180",
+                rating: "⭐⭐⭐⭐",
+                description: "Eye Catching design."
+            },
+            "3": {
+                name: "Air Jordan 9 'Cool Grey'",
+                image: "../images/nike/air jordan/5.JPG",
+                price: "$180",
+                rating: "⭐⭐⭐⭐⭐",
+                description: "For Playing Sports."
+            },
+            "4": {
+                name: "Nike Air Max Plus",
+                image: "../images/nike/air max/5.JPG",
+                price: "$300",
+                rating: "⭐⭐⭐",
+                description: "Eye Catching Design."
+            },
+            "5": {
+                name: "Nike Dunk Retro",
+                image: "../images/nike/dunk/1.JPG",
+                price: "$200",
+                rating: "⭐⭐⭐⭐",
+                description: "Stylish And Comfy."
+            },
+            
+            "6": {
+                name: "Nike Field General'",
+                image: "../images/nike/field/5.JPG",
+                price: "$225",
+                rating: "⭐⭐⭐⭐",
+                description: "For Soccer And Sports"
+            },
+            "7": {
+                name: "Nike Motiva",
+                image: "../images/nike/motiva/1.JPG",
+                price: "$120",
+                rating: "⭐⭐⭐⭐⭐",
+                description: "Ultimate Comfort."
+            },
+            "8": {
+                name: "Nike Zoom Fly 6",
+                image: "../images/nike/zoom/3.jpg",
+                price: "$300",
+                rating: "⭐⭐⭐⭐",
+                description: "Light Weight, Build For Running."
+            },
+            "9": {
+                name: "Puma Redon Move",
+                image: "../images/puma/Redon Move/1.JPG",
+                price: "$70.00",
+                rating: "⭐⭐⭐",
+                description: "Leather Material, Sleek design."
+            },
+            "10": {
+                name: "Puma Cell Thrill",
+                image: "../images/puma/CELL THRILL/1.JPG",
+                price: "$35.99",
+                rating: "⭐⭐⭐⭐",
+                description: "Light Weight, Build For Running."
+            },
+            "11": {
+                name: "Puma Graviton",
+                image: "../images/puma/Graviton/1.JPG",
+                price: "$35.99",
+                rating: "⭐⭐⭐⭐⭐",
+                description: "Comfortable and Durable."
+            },
+            "12": {
+                name: "PUMA INVERSE UNFILTERTED",
+                image: "../images/puma/INVERSE UNFILTERTED/1.JPG",
+                price: "$100.00",
+                rating: "⭐⭐⭐⭐",
+                description: "For Soccer And Sports."
+            },
+            "13": {
+                name: "PUMA x LAMELO",
+                image: "../images/puma/PUMA x LAMELO/1.JPG",
+                price: "$125.00",
+                rating: "⭐⭐⭐",
+                description: "Eye Catching Design.."
+            },
+            "14": {
+                name: "SPEEDCAT OG",
+                image: "../images/puma/SPEEDCAT OG/1.JPG",
+                price: "$100.00",
+                rating: "⭐⭐⭐⭐",
+                description: "For Soccer And Sports."
+            },
+            "15": {
+                name: "Deviate NITRO™ 3",
+                image: "../images/puma/Deviate NITRO™ 3/1.jpg",
+                price: "$300",
+                rating: "⭐⭐⭐",
+                description: "Comfortable and Durable."
+            },
+            "16": {
+                name: "PUMA Ur Mostro",
+                image: "../images/puma/Ur Mostro Communication/1.jpg",
+                price: "$120.00",
+                rating: "⭐⭐⭐⭐",
+                description: "Ultimate Comfort."
+            },
+            "17": {
+                name: "Adizero Adios Pro 4",
+                image: "../images/ADIDAS/AdiosPro4/1.JPG",
+                price: "$250",
+                rating: "⭐⭐⭐⭐",
+                description: "Comfortable and Durable."
+            },
+            "18": {
+                name: "Adizero EVO SL",
+                image: "../images/ADIDAS/EVOSL/1.JPG",
+                price: "$150",
+                rating: "⭐⭐⭐⭐⭐",
+                description: "Light Weight, Build For Running."
+            },
+            "19": {
+                name: "Galaxy OG",
+                image: "../images/ADIDAS/Galaxy OG/1.JPG",
+                price: "$110",
+                rating: "⭐⭐",
+                description: "Eye Catching Design."
+            },
+            
+            "20": {
+                name: "Predator Elite",
+                image: "../images/ADIDAS/Predator/3.JPG",
+                price: "$280",
+                rating: "⭐⭐⭐⭐",
+                description: "Light Weight, Build For Running."
+            },
+            "21": {
+                name: "Supernova Rise 2",
+                image: "../images/ADIDAS/Supernova/1.JPG",
+                price: "$140",
+                rating: "⭐⭐⭐⭐",
+                description: "Comfortable and Durable."
+            },
+            "22": {
+                name: "Terrex Skychaser",
+                image: "../images/adidas/TERREX/1.JPG",
+                price: "$300",
+                rating: "⭐⭐⭐⭐⭐",
+                description: "Ultimate Comfort."
+            },
+            "23": {
+                name: "Ultraboost 1.0",
+                image: "../images/adidas/Ultraboost/1.jpg",
+                price: "$180",
+                rating: "⭐⭐⭐",
+                description: "Eye Catching Design."
+            },
+            "24": {
+                name: "VL Court Bold ",
+                image: "../images/adidas/VLCourt/1.jpg",
+                price: "$80",
+                rating: "⭐⭐⭐⭐",
+                description: "Eye Catching Design."
+            },
+
+        };
+
+        const product1Select = document.getElementById('product1');
+        const product2Select = document.getElementById('product2');
+        const comparisonResult = document.getElementById('comparisonResult');
+
+        function displayComparison() {
+            const product1 = products[product1Select.value];
+            const product2 = products[product2Select.value];
+
+            if (!product1 || !product2) {
+                comparisonResult.innerHTML = '<p>Please select two products to compare.</p>';
+                return;
+            }
+
+            comparisonResult.innerHTML = `
+                <table class="compare-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>${product1.name}</th>
+                        <th>${product2.name}</th>
+                    </tr>
+                    <tr>
+                        <td>Image</td>
+                        <td><img src="${product1.image}" alt="${product1.name}" class="product-image"></td>
+                        <td><img src="${product2.image}" alt="${product2.name}" class="product-image"></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>${product1.price}</td>
+                        <td>${product2.price}</td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td>
+                        <td>${product1.rating}</td>
+                        <td>${product2.rating}</td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>${product1.description}</td>
+                        <td>${product2.description}</td>
+                    </tr>
+                </table>
+            `;
+        }
+
+        product1Select.addEventListener('change', displayComparison);
+        product2Select.addEventListener('change', displayComparison);
+    </script>
+</body>
+</html>
